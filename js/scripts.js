@@ -60,26 +60,28 @@ window.addEventListener('DOMContentLoaded', function () {
         console.log("WOMAN")
     })
 
-    let count = 1;
+let count = 1;
 
     prevHair.addEventListener("click",function (event) {
-        count -=1;
+        // count -=1;
         console.log("PREV")
         
-        console.log(count + " = " + count )
-
-        let ashot = "ARA"
-        console.log(`${ashot}`)
-
-     
+   
         
-        if (count >= 1 && count <=3 ) {
+    if (count >= 1 && count <=3 ) {
+            
+            console.log(count)
             console.log("IF WORKS")
             hairStyle[0].style.backgroundImage = `url('./img/hair/slide/hair-${count}.png')`
+            count -=1;
     } else {
-        console.log(count)
-        count += 1; 
-        console.log(count)
+            console.log("ELSE")
+            count = 3
+            hairStyle[0].style.backgroundImage = `url('./img/hair/slide/hair-${count}.png')`
+            count-=1
+            console.log(count)
+        // count += 1; 
+        // console.log(count)
     }
 
     })
